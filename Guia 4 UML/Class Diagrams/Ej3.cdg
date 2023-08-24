@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia4 - Ej3">
+  <ClassDiagramComponents>
+    <Interface name="CalculoFormas" package="" visibility="public" xPosition="271.0" yPosition="32.0">
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="pi" returnType="double" visibility="public">
+          <Argument type="double" name="constante"/>
+        </Method>
+        <Method name="pi" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Interface>
+    <Class name="Circulo" package="" visibility="public" xPosition="46.0" yPosition="429.0">
+      <Fields>
+        <Field name="radio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rectangulo" package="" visibility="public" xPosition="175.0" yPosition="590.0">
+      <Fields>
+        <Field name="lado1" type="double" visibility="private"/>
+        <Field name="lado2" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Triangulo" package="" visibility="public" xPosition="408.0" yPosition="442.0">
+      <Fields>
+        <Field name="base" type="double" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Figura" package="" visibility="public" xPosition="283.0" yPosition="244.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Triangulo" target="Figura"/>
+    <IsRelation name="is" source="Rectangulo" target="Figura"/>
+    <IsRelation name="is" source="Circulo" target="Figura"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Figura" target="CalculoFormas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

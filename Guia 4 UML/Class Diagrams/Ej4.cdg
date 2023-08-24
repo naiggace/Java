@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia4 - Ej4 UML">
+  <ClassDiagramComponents>
+    <Class name="Position" package="" visibility="public" xPosition="166.0" yPosition="53.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="position" returnType="void" visibility="public"/>
+        <Method name="position" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="getYset" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Personaje" package="" visibility="public" isAbstract="true" xPosition="73.0" yPosition="338.0">
+      <Fields>
+        <Field name="ubicacion" type="position" visibility="protected"/>
+        <Field name="nick" type="String" visibility="protected"/>
+        <Field name="vidas" type="int" visibility="protected"/>
+        <Field name="energia" type="int" visibility="protected"/>
+        <Field name="orientacion" type="char" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="personaje" returnType="void" visibility="public">
+          <Argument type="postion" name="ubicacion"/>
+          <Argument type="String" name="nick"/>
+        </Method>
+        <Method name="disparar" returnType="void" visibility="public"/>
+        <Method name="girar" returnType="void" visibility="public"/>
+        <Method name="avanzar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guerrero" package="" visibility="public" xPosition="135.0" yPosition="654.0">
+      <Fields>
+        <Field name="caballo" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="avanzar" returnType="void" visibility="public"/>
+        <Method name="disparar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Guerrero" target="Personaje"/>
+    <HasRelation name="Tiene" source="Personaje" target="Position" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
